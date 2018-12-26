@@ -1,8 +1,8 @@
-package mohit.com.sampleapplicationdatamodel;
+package mohit.com.sampleapplicationdatamodel.view_model;
 
 import android.arch.lifecycle.ViewModel;
 
-public class MainActivityDataModel extends ViewModel {
+public class ViewModelDataModel extends ViewModel {
 
     // Tracks the score for Team A
     int scoreTeamA = 0;

@@ -1,4 +1,4 @@
-package mohit.com.sampleapplicationdatamodel;
+package mohit.com.sampleapplicationdatamodel.view_model;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -6,19 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import mohit.com.sampleapplicationdatamodel.R;
+
+public class SampleActivityUsingViewModel extends AppCompatActivity {
 
     //View
     private TextView scoreViewOne, scoreViewTwo;
 
     // ViewModel Object
-    MainActivityDataModel mViewModel;
+    ViewModelDataModel mViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mViewModel = ViewModelProviders.of(this).get(MainActivityDataModel.class);
+        setContentView(R.layout.activity_layout_with_view_model);
+        mViewModel = ViewModelProviders.of(this).get(ViewModelDataModel.class);
         scoreViewOne = findViewById(R.id.team_a_score);
         scoreViewTwo = findViewById(R.id.team_b_score);
         displayForTeamA();
